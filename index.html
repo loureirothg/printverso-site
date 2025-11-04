@@ -5,10 +5,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>PrintVerso — Impressão 3D</title>
   <meta name="description" content="Miniaturas e peças 3D sob medida. Action figures, itens para casa e projetos personalizados. Envio nacional." />
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap" rel="stylesheet">
   <script src="https://cdn.tailwindcss.com"></script>
+
   <style>
     :root { color-scheme: dark; }
     body { font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif; }
@@ -16,214 +19,232 @@
     .grad { background-image: linear-gradient(90deg, #c084fc, #34d399); }
   </style>
 </head>
+
 <body class="bg-neutral-950 text-neutral-100">
-  <!-- Navbar -->
-  <header class="sticky top-0 z-50 border-b border-neutral-800 glass">
-    <div class="mx-auto max-w-6xl px-4 py-4 flex items-center justify-between">
-      <a href="#hero" class="flex items-center gap-3">
-        <div class="w-10 h-10 rounded-2xl grad grid place-items-center shadow-lg">
-          <span class="font-black">PV</span>
-        </div>
-        <div>
-          <p class="font-black leading-none text-xl">PrintVerso</p>
-          <p class="text-xs text-neutral-400 leading-none mt-1">Impressão 3D • Geek minimal</p>
-        </div>
-      </a>
-      <nav class="hidden md:flex items-center gap-6 text-sm text-neutral-300">
-        <a href="#catalogo" class="hover:text-white">Catálogo</a>
-        <a href="#personalizados" class="hover:text-white">Personalizados</a>
-        <a href="#faq" class="hover:text-white">FAQ</a>
-        <a href="#contactos" class="hover:text-white">Contactos</a>
-        <a href="#orcamento" class="rounded-2xl px-4 py-2 text-white grad">Pedir Orçamento</a>
-      </nav>
-    </div>
-  </header>
 
-  <!-- Hero -->
-  <section id="hero" class="relative">
-    <div class="absolute inset-0 opacity-30"
-      style="background:
-        radial-gradient(60rem 60rem at 70% -10%, rgba(168,85,247,.25), transparent),
-        radial-gradient(40rem 40rem at 20% 10%, rgba(16,185,129,.25), transparent)">
-    </div>
-    <div class="relative mx-auto max-w-6xl px-4 py-16 md:py-24 grid md:grid-cols-2 gap-10">
+<!-- NAVBAR -->
+<header class="sticky top-0 z-50 border-b border-neutral-800 glass">
+  <div class="mx-auto max-w-6xl px-4 py-4 flex items-center justify-between">
+    <a href="#hero" class="flex items-center gap-3">
+      <div class="w-10 h-10 rounded-2xl grad grid place-items-center shadow-lg">
+        <span class="font-black">PV</span>
+      </div>
       <div>
-        <span class="inline-block text-xs px-2 py-1 rounded bg-neutral-800 border border-neutral-700 text-neutral-300">Feito em Portugal</span>
-        <h1 class="mt-4 text-4xl md:text-6xl font-black leading-tight">
-          Miniaturas e peças 3D <span class="bg-clip-text text-transparent grad">sob medida</span>
-        </h1>
-        <p class="mt-4 text-neutral-300 md:text-lg">
-          Action figures, itens para casa e projetos personalizados. Produção rápida em PLA/resina, pintura à mão e envio nacional.
+        <p class="font-black leading-none text-xl">PrintVerso</p>
+        <p class="text-xs text-neutral-400 leading-none mt-1">Impressão 3D • Geek minimal</p>
+      </div>
+    </a>
+
+    <nav class="hidden md:flex items-center gap-6 text-sm text-neutral-300">
+      <a href="#catalogo" class="hover:text-white">Catálogo</a>
+      <a href="#personalizados" class="hover:text-white">Personalizados</a>
+      <a href="#faq" class="hover:text-white">FAQ</a>
+      <a href="#contactos" class="hover:text-white">Contactos</a>
+      <a href="#orcamento" class="rounded-2xl px-4 py-2 text-white grad">Pedir Orçamento</a>
+    </nav>
+  </div>
+</header>
+
+<!-- HERO -->
+<section id="hero" class="relative">
+  <div class="absolute inset-0 opacity-30"
+    style="background:
+      radial-gradient(60rem 60rem at 70% -10%, rgba(168,85,247,.25), transparent),
+      radial-gradient(40rem 40rem at 20% 10%, rgba(16,185,129,.25), transparent)">
+  </div>
+
+  <div class="relative mx-auto max-w-6xl px-4 py-16 md:py-24 grid md:grid-cols-2 gap-10">
+    <div>
+      <span class="inline-block text-xs px-2 py-1 rounded bg-neutral-800 border border-neutral-700 text-neutral-300">Feito em Portugal</span>
+
+      <h1 class="mt-4 text-4xl md:text-6xl font-black leading-tight">
+        Miniaturas e peças 3D <span class="bg-clip-text text-transparent grad">sob medida</span>
+      </h1>
+
+      <p class="mt-4 text-neutral-300 md:text-lg">
+        Action figures, itens para casa e projetos personalizados. Produção rápida em PLA/resina, pintura à mão e envio nacional.
+      </p>
+
+      <div class="mt-8 flex flex-wrap gap-3">
+        <a href="#orcamento" class="rounded-2xl px-5 py-3 text-white grad">Pedir Orçamento</a>
+        <a href="#catalogo" class="rounded-2xl px-5 py-3 border border-neutral-700 text-neutral-200">Ver Catálogo</a>
+      </div>
+
+      <div class="mt-6 grid grid-cols-3 gap-4 text-neutral-400 text-sm">
+        <div class="border border-neutral-800 rounded-xl p-3 text-center">Alta precisão</div>
+        <div class="border border-neutral-800 rounded-xl p-3 text-center">Pintura premium</div>
+        <div class="border border-neutral-800 rounded-xl p-3 text-center">Envio nacional</div>
+      </div>
+    </div>
+
+    <div class="grid place-items-center">
+      <div class="w-full aspect-square rounded-3xl bg-neutral-900 border border-neutral-800 p-4 shadow-2xl grid place-items-center">
+        <div class="text-center text-neutral-300">
+          <p>Preview do produto</p>
+          <p class="text-xs text-neutral-500">Substitui por fotos reais</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CATÁLOGO -->
+<section id="catalogo" class="mx-auto max-w-6xl px-4 py-10">
+  <div class="flex items-end justify-between mb-6">
+    <h2 class="text-2xl md:text-3xl font-extrabold">Catálogo em Destaque</h2>
+    <div class="text-sm text-neutral-400">Feito por encomenda • Prazos rápidos</div>
+  </div>
+
+  <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+    <!-- CARD 1 -->
+    <div class="bg-neutral-900 border border-neutral-800 rounded-3xl overflow-hidden">
+      <img src="./assets/hornet.png" class="w-full aspect-square bg-neutral-800" alt="Hornet" />
+      <div class="p-4">
+        <div class="flex items-center justify-between font-semibold">
+          <span>Hornet – Hollow Knight</span><span class="text-emerald-400">€29</span>
+        </div>
+        <div class="mt-3 flex gap-2">
+          <a href="#orcamento" class="rounded-xl px-3 py-2 border border-neutral-700">Personalizar</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- CARD 2 -->
+    <div class="bg-neutral-900 border border-neutral-800 rounded-3xl overflow-hidden">
+      <img src="./assets/jason.png" class="w-full aspect-square bg-neutral-800" alt="Jason" />
+      <div class="p-4">
+        <div class="flex items-center justify-between font-semibold">
+          <span>Jason – Sexta-feira 13 (Chibi)</span><span class="text-emerald-400">€25</span>
+        </div>
+        <div class="mt-3 flex gap-2">
+          <a href="#orcamento" class="rounded-xl px-3 py-2 border border-neutral-700">Personalizar</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- CARD 3 -->
+    <div class="bg-neutral-900 border border-neutral-800 rounded-3xl overflow-hidden">
+      <img src="./assets/deadpool.png" class="w-full aspect-square bg-neutral-800" alt="Deadpool" />
+      <div class="p-4">
+        <div class="flex items-center justify-between font-semibold">
+          <span>Deadpool – Mini busto</span><span class="text-emerald-400">€22</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PERSONALIZADOS -->
+<section id="personalizados" class="mx-auto max-w-6xl px-4 py-10">
+  <div class="grid md:grid-cols-2 gap-10">
+
+    <div>
+      <h3 class="text-2xl md:text-3xl font-extrabold">Peças personalizadas</h3>
+      <p class="mt-3 text-neutral-300">
+        Tens um STL/3MF ou apenas uma ideia? Criamos do zero, dividimos em peças, adicionamos pinos e entregamos pronto para pintar.
+      </p>
+
+      <ul class="mt-6 grid gap-3 text-neutral-300 text-sm list-disc list-inside">
+        <li>Modelagem e ajustes</li>
+        <li>Impressão PLA/Resina</li>
+        <li>Acabamento com primer + pintura</li>
+        <li>Envio protegido com tracking</li>
+      </ul>
+    </div>
+
+    <!-- FORMULÁRIO -->
+    <div id="orcamento" class="bg-neutral-900 border border-neutral-800 rounded-3xl p-6">
+      <h4 class="text-xl font-bold">Pedido de orçamento</h4>
+
+      <div class="grid gap-3 mt-4">
+        <label class="text-sm">Nome<input id="nome" class="mt-1 w-full rounded-xl bg-neutral-950 border border-neutral-800 px-3 py-2" placeholder="Teu nome"></label>
+        <label class="text-sm">Email<input id="email" type="email" class="mt-1 w-full rounded-xl bg-neutral-950 border border-neutral-800 px-3 py-2" placeholder="teu@email.com"></label>
+        <label class="text-sm">Descrição<textarea id="descricao" class="mt-1 w-full rounded-xl bg-neutral-950 border border-neutral-800 px-3 py-2 min-h-[110px]" placeholder="Tamanho, cores, acabamento, prazos…"></textarea></label>
+
+        <div class="grid grid-cols-2 gap-3">
+          <label class="text-sm">Altura (cm)<input id="altura" class="mt-1 w-full rounded-xl bg-neutral-950 border border-neutral-800 px-3 py-2" value="12"></label>
+          <label class="text-sm">Prazo ideal<input id="prazo" class="mt-1 w-full rounded-xl bg-neutral-950 border border-neutral-800 px-3 py-2" placeholder="Ex: 10 dias"></label>
+        </div>
+
+        <label class="text-sm">Link do modelo (opcional)<input id="link" class="mt-1 w-full rounded-xl bg-neutral-950 border border-neutral-800 px-3 py-2" placeholder="URL do STL/3MF/Ideia"></label>
+
+        <div class="flex flex-wrap gap-3 pt-2">
+          <a id="mailto" class="rounded-2xl px-4 py-2 border border-neutral-700 cursor-pointer">Enviar por Email</a>
+        </div>
+
+        <p class="text-xs text-neutral-500 mt-2">
+          Ao enviar, concordas com nossos prazos e política de encomendas.
         </p>
-        <div class="mt-8 flex flex-wrap gap-3">
-          <a href="#orcamento" class="rounded-2xl px-5 py-3 text-white grad">Pedir Orçamento</a>
-          <a href="#catalogo" class="rounded-2xl px-5 py-3 border border-neutral-700 text-neutral-200">Ver Catálogo</a>
-        </div>
-        <div class="mt-6 grid grid-cols-3 gap-4 text-neutral-400 text-sm">
-          <div class="border border-neutral-800 rounded-xl p-3 text-center">Alta precisão</div>
-          <div class="border border-neutral-800 rounded-xl p-3 text-center">Pintura premium</div>
-          <div class="border border-neutral-800 rounded-xl p-3 text-center">Envio nacional</div>
-        </div>
-      </div>
-      <div class="grid place-items-center">
-        <div class="w-full aspect-square rounded-3xl bg-neutral-900 border border-neutral-800 p-4 shadow-2xl grid place-items-center">
-          <div class="text-center">
-            <p class="text-neutral-300">Preview do produto</p>
-            <p class="text-xs text-neutral-500">Substitui por fotos reais</p>
-          </div>
-        </div>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- Catálogo -->
-  <section id="catalogo" class="mx-auto max-w-6xl px-4 py-10">
-    <div class="flex items-end justify-between mb-6">
-      <h2 class="text-2xl md:text-3xl font-extrabold">Catálogo em Destaque</h2>
-      <div class="text-sm text-neutral-400">Feito por encomenda • Prazos rápidos</div>
+<!-- FAQ -->
+<section id="faq" class="mx-auto max-w-6xl px-4 py-10">
+  <h3 class="text-2xl md:text-3xl font-extrabold">FAQ</h3>
+
+  <div class="mt-6 grid md:grid-cols-2 gap-6">
+    <details class="bg-neutral-900 border border-neutral-800 rounded-2xl p-5"><summary class="cursor-pointer font-semibold">Quanto tempo leva para produzir?</summary><p class="mt-2 text-neutral-300">Peças de 10–20 cm normalmente em 5–10 dias.</p></details>
+    <details class="bg-neutral-900 border border-neutral-800 rounded-2xl p-5"><summary class="cursor-pointer font-semibold">Enviam para todo o país?</summary><p class="mt-2 text-neutral-300">Sim. Envio com tracking e embalamento reforçado.</p></details>
+    <details class="bg-neutral-900 border border-neutral-800 rounded-2xl p-5"><summary class="cursor-pointer font-semibold">Aceitam modelos do cliente?</summary><p class="mt-2 text-neutral-300">Aceitamos STL/3MF e também criamos sob pedido.</p></details>
+  </div>
+</section>
+
+<!-- LINKS -->
+<section id="links" class="mx-auto max-w-6xl px-4 pb-16">
+  <div class="bg-neutral-900 border border-neutral-800 rounded-3xl p-6 md:p-8 flex flex-col md:flex-row items-center justify-between gap-6">
+    <div>
+      <h4 class="text-xl font-bold">Compra segura nas plataformas</h4>
+      <p class="text-neutral-300 mt-1">Pode comprar pelas nossas lojas oficiais.</p>
     </div>
-    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
-      <!-- Cards -->
-      <div class="bg-neutral-900 border border-neutral-800 rounded-3xl overflow-hidden">
-        <img src="./assets/hornet.png" alt="Hornet" class="w-full aspect-square object-cover bg-neutral-800" />
-        <div class="p-4">
-          <div class="flex items-center justify-between font-semibold">
-            <span>Hornet – Hollow Knight</span><span class="text-emerald-400">€29</span>
-          </div>
-          <div class="mt-3 flex gap-2">
-            <a href="#orcamento" class="rounded-xl px-3 py-2 border border-neutral-700">Personalizar</a>
-            <a href="#links" class="rounded-xl px-3 py-2 grad text-white">Comprar</a>
-          </div>
-        </div>
-      </div>
-      <div class="bg-neutral-900 border border-neutral-800 rounded-3xl overflow-hidden">
-        <img src="./assets/jason.png" alt="Jason" class="w-full aspect-square object-cover bg-neutral-800" />
-        <div class="p-4">
-          <div class="flex items-center justify-between font-semibold">
-            <span>Jason – Sexta‑feira 13 (Chibi)</span><span class="text-emerald-400">€25</span>
-          </div>
-          <div class="mt-3 flex gap-2">
-            <a href="#orcamento" class="rounded-xl px-3 py-2 border border-neutral-700">Personalizar</a>
-            <a href="#links" class="rounded-xl px-3 py-2 grad text-white">Comprar</a>
-          </div>
-        </div>
-      </div>
-      <div class="bg-neutral-900 border border-neutral-800 rounded-3xl overflow-hidden">
-        <img src="./assets/deadpool.png" alt="Deadpool" class="w-full aspect-square object-cover bg-neutral-800" />
-        <div class="p-4">
-          <div class="flex items-center justify-between font-semibold">
-            <span>Deadpool – Mini busto</span><span class="text-emerald-400">€22</span>
-          </div>
-        </div>
-      </div>
+    <div class="flex flex-wrap gap-3">
+      <a href="https://www.vinted.pt/" target="_blank" class="rounded-2xl px-4 py-2 bg-neutral-800 border border-neutral-700">Vinted</a>
+      <a href="https://www.instagram.com/" target="_blank" class="rounded-2xl px-4 py-2 grad text-white">Instagram</a>
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- Personalizados + Orçamento -->
-  <section id="personalizados" class="mx-auto max-w-6xl px-4 py-10">
-    <div class="grid md:grid-cols-2 gap-10">
-      <div>
-        <h3 class="text-2xl md:text-3xl font-extrabold">Peças personalizadas</h3>
-        <p class="mt-3 text-neutral-300">
-          Tens um STL/3MF ou apenas uma ideia? Criamos do zero, dividimos em peças, adicionamos pinos e entregamos pronto para pintar.
-        </p>
-        <ul class="mt-6 grid gap-3 text-neutral-300 text-sm list-disc list-inside">
-          <li>Modelagem e ajustes</li>
-          <li>Impressão PLA/Resina</li>
-          <li>Acabamento: lixagem, primer, pintura e verniz</li>
-          <li>Envio protegido com tracking</li>
-        </ul>
+<!-- FOOTER -->
+<footer id="contactos" class="border-t border-neutral-800">
+  <div class="mx-auto max-w-6xl px-4 py-10 grid md:grid-cols-3 gap-6">
+    <div>
+      <div class="flex items-center gap-3">
+        <img src="./assets/logo.png" class="w-10 h-10 rounded-2xl grad" alt="PV">
+        <p class="font-black text-lg">PrintVerso</p>
       </div>
-      <div id="orcamento" class="bg-neutral-900 border border-neutral-800 rounded-3xl p-6">
-        <h4 class="text-xl font-bold">Pedido de orçamento</h4>
-        <div class="grid gap-3 mt-4">
-          <label class="text-sm">Nome<input id="nome" class="mt-1 w-full rounded-xl bg-neutral-950 border border-neutral-800 px-3 py-2" placeholder="Teu nome"></label>
-          <label class="text-sm">Email<input id="email" type="email" class="mt-1 w-full rounded-xl bg-neutral-950 border border-neutral-800 px-3 py-2" placeholder="teu@email.com"></label>
-          <label class="text-sm">Descrição<textarea id="descricao" class="mt-1 w-full rounded-xl bg-neutral-950 border border-neutral-800 px-3 py-2 min-h-[110px]" placeholder="Tamanho, cores, acabamento, prazos…"></textarea></label>
-          <div class="grid grid-cols-2 gap-3">
-            <label class="text-sm">Altura (cm)<input id="altura" class="mt-1 w-full rounded-xl bg-neutral-950 border border-neutral-800 px-3 py-2" value="12"></label>
-            <label class="text-sm">Prazo ideal<input id="prazo" class="mt-1 w-full rounded-xl bg-neutral-950 border border-neutral-800 px-3 py-2" placeholder="Ex: 10 dias"></label>
-          </div>
-          <label class="text-sm">Link do modelo (opcional)<input id="link" class="mt-1 w-full rounded-xl bg-neutral-950 border border-neutral-800 px-3 py-2" placeholder="URL do STL/3MF/Ideia"></label>
-          <div class="flex flex-wrap gap-3 pt-2">
-            
-            <a id="mailto" class="rounded-2xl px-4 py-2 border border-neutral-700" >Enviar por Email</a>
-          </div>
-          <p class="text-xs text-neutral-500 mt-2">Ao enviar, concordas com nossos prazos e política de encomendas.</p>
-        </div>
-      </div>
+      <p class="text-neutral-400 mt-3 max-w-sm">Loja de impressão 3D em Portugal. Action figures, itens para casa e projetos personalizados.</p>
     </div>
-  </section>
 
-  <!-- FAQ -->
-  <section id="faq" class="mx-auto max-w-6xl px-4 py-10">
-    <h3 class="text-2xl md:text-3xl font-extrabold">FAQ</h3>
-    <div class="mt-6 grid md:grid-cols-2 gap-6">
-      <details class="bg-neutral-900 border border-neutral-800 rounded-2xl p-5"><summary class="cursor-pointer font-semibold">Quanto tempo leva para produzir?</summary><p class="mt-2 text-neutral-300">Peças de 10–20 cm normalmente em 5–10 dias, dependendo do acabamento.</p></details>
-      <details class="bg-neutral-900 border border-neutral-800 rounded-2xl p-5"><summary class="cursor-pointer font-semibold">Enviam para todo o país?</summary><p class="mt-2 text-neutral-300">Sim. Envio com tracking e embalamento reforçado.</p></details>
-      <details class="bg-neutral-900 border border-neutral-800 rounded-2xl p-5"><summary class="cursor-pointer font-semibold">Podem pintar com cores específicas?</summary><p class="mt-2 text-neutral-300">Sim. Usamos acrílico + verniz (fosco/brilho).</p></details>
-      <details class="bg-neutral-900 border border-neutral-800 rounded-2xl p-5"><summary class="cursor-pointer font-semibold">Aceitam modelos do cliente?</summary><p class="mt-2 text-neutral-300">Aceitamos STL/3MF e também criamos sob pedido.</p></details>
+    <div>
+      <h5 class="font-semibold">Contactos</h5>
+      <ul class="mt-3 space-y-2 text-neutral-400">
+        <li><a id="emailFooter" class="hover:text-white"></a></li>
+      </ul>
     </div>
-  </section>
 
-  <!-- Links -->
-  <section id="links" class="mx-auto max-w-6xl px-4 pb-16">
-    <div class="bg-neutral-900 border border-neutral-800 rounded-3xl p-6 md:p-8 flex flex-col md:flex-row items-center justify-between gap-6">
-      <div>
-        <h4 class="text-xl font-bold">Compra segura nas plataformas</h4>
-        <p class="text-neutral-300 mt-1">Vê as avaliações e compra com proteção do marketplace.</p>
-      </div>
-      <div class="flex flex-wrap gap-3">
-        <a href="https://www.vinted.pt/" target="_blank" class="rounded-2xl px-4 py-2 bg-neutral-800 border border-neutral-700">Vinted</a>
-        <a href="https://www.amazon.pt/" target="_blank" class="rounded-2xl px-4 py-2 bg-neutral-800 border border-neutral-700">Amazon</a>
-        <a href="https://www.instagram.com/" target="_blank" class="rounded-2xl px-4 py-2 grad text-white">Instagram</a>
-      </div>
+    <div>
+      <h5 class="font-semibold">Informações</h5>
+      <ul class="mt-3 space-y-2 text-neutral-400 text-sm">
+        <li>Prazo padrão: 5–10 dias úteis</li>
+        <li>IVA: Isento art. 53.º ou Regime Normal</li>
+        <li>Faturação com QR/ATCUD (ou portal das finanças)</li>
+      </ul>
     </div>
-  </section>
+  </div>
 
-  <!-- Footer -->
-  <footer id="contactos" class="border-t border-neutral-800">
-    <div class="mx-auto max-w-6xl px-4 py-10 grid md:grid-cols-3 gap-6">
-      <div>
-        <div class="flex items-center gap-3">
-          <img src="./assets/logo.png" class="w-10 h-10 rounded-2xl grad" alt="PV">
-          <p class="font-black text-lg">PrintVerso</p>
-        </div>
-        <p class="text-neutral-400 mt-3 max-w-sm">Loja de impressão 3D em Portugal. Action figures, itens para casa e projetos personalizados.</p>
-        <div class="flex gap-2 mt-3 text-xs">
-          <span class="px-2 py-1 rounded bg-neutral-800 border border-neutral-700">MBWay</span>
-          <span class="px-2 py-1 rounded bg-neutral-800 border border-neutral-700">Multibanco</span>
-          <span class="px-2 py-1 rounded bg-neutral-800 border border-neutral-700">Transferência</span>
-        </div>
-      </div>
-      <div>
-        <h5 class="font-semibold">Contactos</h5>
-        <ul class="mt-3 space-y-2 text-neutral-400">
-          <li><a id="emailFooter" href="mailto:suporte@printverso.pt" class="hover:text-white">suporte@printverso.pt</a></li>
-          <li><a id="phoneFooter" href="tel:+351900000000" class="hover:text-white">+351 900 000 000</a></li>
-          <li>Envio nacional com tracking</li>
-        </ul>
-      </div>
-      <div>
-        <h5 class="font-semibold">Informações</h5>
-        <ul class="mt-3 space-y-2 text-neutral-400 text-sm">
-          <li>Prazo padrão: 5–10 dias úteis</li>
-          <li>IVA: Isento art. 53.º ou Regime Normal</li>
-          <li>Faturação com QR/ATCUD (ou portal)</li>
-        </ul>
-      </div>
-    </div>
-    <div class="text-center text-xs text-neutral-600 pb-8">© <span id="year"></span> PrintVerso. Todos os direitos reservados.</div>
-  </footer>
+  <div class="text-center text-xs text-neutral-600 pb-8">
+    © <span id="year"></span> PrintVerso. Todos os direitos reservados.
+  </div>
+</footer>
 
-
+<!-- SCRIPT -->
 <script>
-  // Atualiza ano no footer
   document.getElementById('year').textContent = new Date().getFullYear();
 
-  // Email de destino
-  const email = 'suporte@printverso.pt'; // <-- coloca o teu email aqui
-  document.getElementById('emailFooter').href = 'mailto:' + email;
+  const email = "cliente@printverso.pt";
+  document.getElementById("emailFooter").href = "mailto:" + email;
+  document.getElementById("emailFooter").textContent = email;
 
   function buildMessage() {
     const nome = document.getElementById('nome').value || '(teu nome)';
@@ -238,19 +259,20 @@
            `Altura: ${altura} cm%0A` +
            `Prazo: ${prazo}%0A` +
            `Link: ${encodeURIComponent(link)}%0A` +
-           `Email: ${mail}`;
+           `Email para contacto: ${mail}`;
   }
 
   const mailto = document.getElementById('mailto');
-
   function updateLinks() {
     mailto.href = `mailto:${email}?subject=Orçamento%20PrintVerso&body=${buildMessage()}`;
   }
 
   ['nome','email','descricao','altura','prazo','link'].forEach(id => {
-    const el = document.getElementById(id);
-    el.addEventListener('input', updateLinks);
+    document.getElementById(id).addEventListener('input', updateLinks);
   });
 
   updateLinks();
 </script>
+
+</body>
+</html>
