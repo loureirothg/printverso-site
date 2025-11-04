@@ -146,7 +146,7 @@
           </div>
           <label class="text-sm">Link do modelo (opcional)<input id="link" class="mt-1 w-full rounded-xl bg-neutral-950 border border-neutral-800 px-3 py-2" placeholder="URL do STL/3MF/Ideia"></label>
           <div class="flex flex-wrap gap-3 pt-2">
-            <a id="whats" class="rounded-2xl px-4 py-2 bg-emerald-600 text-white" target="_blank" rel="noreferrer">Enviar via WhatsApp</a>
+            
             <a id="mailto" class="rounded-2xl px-4 py-2 border border-neutral-700" >Enviar por Email</a>
           </div>
           <p class="text-xs text-neutral-500 mt-2">Ao enviar, concordas com nossos prazos e política de encomendas.</p>
@@ -216,15 +216,14 @@
     <div class="text-center text-xs text-neutral-600 pb-8">© <span id="year"></span> PrintVerso. Todos os direitos reservados.</div>
   </footer>
 
+
 <script>
   // Atualiza ano no footer
   document.getElementById('year').textContent = new Date().getFullYear();
 
-  // Configura WhatsApp e Email do orçamento
-  const phone = '351900000000'; // <-- Substitui pelo teu número (sem +)
-  const email = 'suporte@printverso.pt'; // <-- Substitui pelo teu email
+  // Email de destino
+  const email = 'suporte@printverso.pt'; // <-- coloca o teu email aqui
   document.getElementById('emailFooter').href = 'mailto:' + email;
-  document.getElementById('phoneFooter').href = 'tel:+' + phone;
 
   function buildMessage() {
     const nome = document.getElementById('nome').value || '(teu nome)';
@@ -233,19 +232,25 @@
     const altura = document.getElementById('altura').value || '';
     const prazo = document.getElementById('prazo').value || '';
     const link = document.getElementById('link').value || '';
-    return `Olá, sou ${nome}.%0AQuero um orçamento para impressão 3D.%0A%0ADescrição: ${encodeURIComponent(descricao)}%0AAltura: ${altura} cm%0APrazo: ${prazo}%0ALink: ${encodeURIComponent(link)}%0AEmail: ${mail}`;
+
+    return `Olá, sou ${nome}.%0AQuero um orçamento para impressão 3D.%0A%0A` +
+           `Descrição: ${encodeURIComponent(descricao)}%0A` +
+           `Altura: ${altura} cm%0A` +
+           `Prazo: ${prazo}%0A` +
+           `Link: ${encodeURIComponent(link)}%0A` +
+           `Email: ${mail}`;
   }
-  const whats = document.getElementById('whats');
+
   const mailto = document.getElementById('mailto');
+
   function updateLinks() {
-    whats.href = `https://wa.me/${phone}?text=${buildMessage()}`;
     mailto.href = `mailto:${email}?subject=Orçamento%20PrintVerso&body=${buildMessage()}`;
   }
+
   ['nome','email','descricao','altura','prazo','link'].forEach(id => {
     const el = document.getElementById(id);
     el.addEventListener('input', updateLinks);
   });
+
   updateLinks();
 </script>
-</body>
-</html>
