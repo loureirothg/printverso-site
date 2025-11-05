@@ -1,31 +1,8 @@
 {
-  "redirects": [
-    { "source": "http://printverso.pt/(.*)", "destination": "https://www.printverso.pt/$1", "permanent": true },
-    { "source": "http://www.printverso.pt/(.*)", "destination": "https://www.printverso.pt/$1", "permanent": true }
-  ],
-  "headers": [
+  "rewrites": [
     {
       "source": "/(.*)",
-      "headers": [
-        { "key": "Strict-Transport-Security", "value": "max-age=63072000; includeSubDomains; preload" },
-        { "key": "X-Content-Type-Options", "value": "nosniff" },
-        { "key": "Referrer-Policy", "value": "strict-origin-when-cross-origin" },
-        { "key": "X-Frame-Options", "value": "DENY" }
-      ]
-    }
-  ]
-}
-
-{
-  "headers": [
-    {
-      "source": "/(.*)",
-      "headers": [
-        { "key": "Strict-Transport-Security", "value": "max-age=31536000; includeSubDomains; preload" },
-        { "key": "X-Content-Type-Options", "value": "nosniff" },
-        { "key": "Referrer-Policy", "value": "strict-origin-when-cross-origin" },
-        { "key": "Content-Security-Policy", "value": "upgrade-insecure-requests" }
-      ]
+      "destination": "/$1"
     }
   ],
   "redirects": [
@@ -34,6 +11,19 @@
       "has": [{ "type": "host", "value": "www.printeverso.pt" }],
       "destination": "https://printeverso.pt/$1",
       "permanent": true
+    }
+  ],
+  "headers": [
+    {
+      "source": "/(.*)",
+      "headers": [
+        { "key": "Strict-Transport-Security", "value": "max-age=63072000; includeSubDomains; preload" },
+        { "key": "X-Content-Type-Options", "value": "nosniff" },
+        { "key": "X-Frame-Options", "value": "DENY" },
+        { "key": "Referrer-Policy", "value": "strict-origin-when-cross-origin" },
+        { "key": "Permissions-Policy", "value": "camera=(), microphone=(), geolocation=()" },
+        { "key": "Content-Security-Policy", "value": "upgrade-insecure-requests" }
+      ]
     }
   ]
 }
