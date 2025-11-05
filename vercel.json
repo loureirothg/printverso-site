@@ -1,18 +1,4 @@
 {
-  "rewrites": [
-    {
-      "source": "/(.*)",
-      "destination": "/$1"
-    }
-  ],
-  "redirects": [
-    {
-      "source": "/(.*)",
-      "has": [{ "type": "host", "value": "www.printeverso.pt" }],
-      "destination": "https://printeverso.pt/$1",
-      "permanent": true
-    }
-  ],
   "headers": [
     {
       "source": "/(.*)",
@@ -25,6 +11,13 @@
         { "key": "Content-Security-Policy", "value": "upgrade-insecure-requests" }
       ]
     }
+  ],
+  "redirects": [
+    {
+      "source": "/(.*)",
+      "has": [{ "type": "host", "value": "www.printverso3d.art" }],
+      "destination": "https://printverso3d.art/$1",
+      "permanent": true
+    }
   ]
 }
-
