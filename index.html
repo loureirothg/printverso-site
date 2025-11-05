@@ -3,276 +3,195 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>PrintVerso — Impressão 3D</title>
-  <meta name="description" content="Miniaturas e peças 3D sob medida. Action figures, itens para casa e projetos personalizados. Envio nacional." />
-
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap" rel="stylesheet">
+  <title>PrintVerso — Miniaturas 3D sob medida</title>
+  <meta name="description" content="Miniaturas 3D impressas e pintadas à mão. Encomendas personalizadas e envio para todo Portugal." />
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
   <script src="https://cdn.tailwindcss.com"></script>
-
   <style>
-    :root { color-scheme: dark; }
-    body { font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif; }
-    .glass { background: rgba(24,24,27,.6); backdrop-filter: blur(10px); }
-    .grad { background-image: linear-gradient(90deg, #c084fc, #34d399); }
+    :root { color-scheme: dark light; }
+    .container{ max-width:1100px; }
+    /* simples lightbox */
+    dialog::backdrop { background: rgb(0 0 0 / .7); }
+    dialog { width: min(92vw, 980px); border: 0; padding: 0; background: transparent; }
   </style>
 </head>
+<body class="bg-neutral-950 text-neutral-100 antialiased">
+  <!-- Header -->
+  <header class="border-b border-neutral-800/70 sticky top-0 z-30 backdrop-blur supports-[backdrop-filter]:bg-neutral-950/70">
+    <div class="container mx-auto px-4 py-3 flex items-center justify-between">
+      <a href="#" class="flex items-center gap-2">
+        <div class="w-9 h-9 rounded-xl bg-indigo-600 grid place-items-center font-black">PV</div>
+        <span class="font-extrabold tracking-tight text-lg">PrintVerso</span>
+      </a>
+      <nav class="hidden sm:flex items-center gap-6 text-sm text-neutral-300">
+        <a href="#galeria" class="hover:text-white">Galeria</a>
+        <a href="#processo" class="hover:text-white">Como funciona</a>
+        <a href="#contacto" class="inline-flex items-center gap-2 px-3 py-2 rounded-lg bg-indigo-600 hover:bg-indigo-500 text-white font-medium">Pedir orçamento</a>
+      </nav>
+    </div>
+  </header>
 
-<body class="bg-neutral-950 text-neutral-100">
-
-<!-- NAVBAR -->
-<header class="sticky top-0 z-50 border-b border-neutral-800 glass">
-  <div class="mx-auto max-w-6xl px-4 py-4 flex items-center justify-between">
-    <a href="#hero" class="flex items-center gap-3">
-      <div class="w-10 h-10 rounded-2xl grad grid place-items-center shadow-lg">
-        <span class="font-black">PV</span>
-      </div>
-      <div>
-        <p class="font-black leading-none text-xl">PrintVerso</p>
-        <p class="text-xs text-neutral-400 leading-none mt-1">Impressão 3D • Geek minimal</p>
-      </div>
-    </a>
-
-    <nav class="hidden md:flex items-center gap-6 text-sm text-neutral-300">
-      <a href="#catalogo" class="hover:text-white">Catálogo</a>
-      <a href="#personalizados" class="hover:text-white">Personalizados</a>
-      <a href="#faq" class="hover:text-white">FAQ</a>
-      <a href="#contactos" class="hover:text-white">Contactos</a>
-      <a href="#orcamento" class="rounded-2xl px-4 py-2 text-white grad">Pedir Orçamento</a>
-    </nav>
-  </div>
-</header>
-
-<!-- HERO -->
-<section id="hero" class="relative">
-  <div class="absolute inset-0 opacity-30"
-    style="background:
-      radial-gradient(60rem 60rem at 70% -10%, rgba(168,85,247,.25), transparent),
-      radial-gradient(40rem 40rem at 20% 10%, rgba(16,185,129,.25), transparent)">
-  </div>
-
-  <div class="relative mx-auto max-w-6xl px-4 py-16 md:py-24 grid md:grid-cols-2 gap-10">
+  <!-- Hero -->
+  <section class="container mx-auto px-4 py-12 md:py-16 grid md:grid-cols-2 gap-8 items-center">
     <div>
-      <span class="inline-block text-xs px-2 py-1 rounded bg-neutral-800 border border-neutral-700 text-neutral-300">Feito em Portugal</span>
-
-      <h1 class="mt-4 text-4xl md:text-6xl font-black leading-tight">
-        Miniaturas e peças 3D <span class="bg-clip-text text-transparent grad">sob medida</span>
+      <h1 class="text-4xl md:text-5xl font-black leading-tight">
+        Miniaturas 3D <span class="text-indigo-500">feitas à mão</span>
       </h1>
-
-      <p class="mt-4 text-neutral-300 md:text-lg">
-        Action figures, itens para casa e projetos personalizados. Produção rápida em PLA/resina, pintura à mão e envio nacional.
-      </p>
-
-      <div class="mt-8 flex flex-wrap gap-3">
-        <a href="#orcamento" class="rounded-2xl px-5 py-3 text-white grad">Pedir Orçamento</a>
-        <a href="#catalogo" class="rounded-2xl px-5 py-3 border border-neutral-700 text-neutral-200">Ver Catálogo</a>
+      <p class="mt-4 text-neutral-300 text-lg">Action figures e bustos personalizados, impressos em 3D e pintados com acabamento de estúdio. Encomendas em Portugal.</p>
+      <div class="mt-6 flex flex-wrap gap-3">
+        <a href="#galeria" class="px-4 py-2 rounded-lg bg-white/10 hover:bg-white/20">Ver galeria</a>
+        <a href="#contacto" class="px-4 py-2 rounded-lg bg-indigo-600 hover:bg-indigo-500">Pedir orçamento</a>
       </div>
-
-      <div class="mt-6 grid grid-cols-3 gap-4 text-neutral-400 text-sm">
-        <div class="border border-neutral-800 rounded-xl p-3 text-center">Alta precisão</div>
-        <div class="border border-neutral-800 rounded-xl p-3 text-center">Pintura premium</div>
-        <div class="border border-neutral-800 rounded-xl p-3 text-center">Envio nacional</div>
-      </div>
-    </div>
-
-    <div class="grid place-items-center">
-      <div class="w-full aspect-square rounded-3xl bg-neutral-900 border border-neutral-800 p-4 shadow-2xl grid place-items-center">
-        <div class="text-center text-neutral-300">
-          <p>Preview do produto</p>
-          <p class="text-xs text-neutral-500">Substitui por fotos reais</p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- CATÁLOGO -->
-<section id="catalogo" class="mx-auto max-w-6xl px-4 py-10">
-  <div class="flex items-end justify-between mb-6">
-    <h2 class="text-2xl md:text-3xl font-extrabold">Catálogo em Destaque</h2>
-    <div class="text-sm text-neutral-400">Feito por encomenda • Prazos rápidos</div>
-  </div>
-
-  <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
-    <!-- CARD 1 -->
-    <div class="bg-neutral-900 border border-neutral-800 rounded-3xl overflow-hidden">
-      <img src="./assets/hornet.png" class="w-full aspect-square bg-neutral-800" alt="Hornet" />
-      <div class="p-4">
-        <div class="flex items-center justify-between font-semibold">
-          <span>Hornet – Hollow Knight</span><span class="text-emerald-400">€29</span>
-        </div>
-        <div class="mt-3 flex gap-2">
-          <a href="#orcamento" class="rounded-xl px-3 py-2 border border-neutral-700">Personalizar</a>
-        </div>
-      </div>
-    </div>
-
-    <!-- CARD 2 -->
-    <div class="bg-neutral-900 border border-neutral-800 rounded-3xl overflow-hidden">
-      <img src="./assets/jason.png" class="w-full aspect-square bg-neutral-800" alt="Jason" />
-      <div class="p-4">
-        <div class="flex items-center justify-between font-semibold">
-          <span>Jason – Sexta-feira 13 (Chibi)</span><span class="text-emerald-400">€25</span>
-        </div>
-        <div class="mt-3 flex gap-2">
-          <a href="#orcamento" class="rounded-xl px-3 py-2 border border-neutral-700">Personalizar</a>
-        </div>
-      </div>
-    </div>
-
-    <!-- CARD 3 -->
-    <div class="bg-neutral-900 border border-neutral-800 rounded-3xl overflow-hidden">
-      <img src="./assets/deadpool.png" class="w-full aspect-square bg-neutral-800" alt="Deadpool" />
-      <div class="p-4">
-        <div class="flex items-center justify-between font-semibold">
-          <span>Deadpool – Mini busto</span><span class="text-emerald-400">€22</span>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- PERSONALIZADOS -->
-<section id="personalizados" class="mx-auto max-w-6xl px-4 py-10">
-  <div class="grid md:grid-cols-2 gap-10">
-
-    <div>
-      <h3 class="text-2xl md:text-3xl font-extrabold">Peças personalizadas</h3>
-      <p class="mt-3 text-neutral-300">
-        Tens um STL/3MF ou apenas uma ideia? Criamos do zero, dividimos em peças, adicionamos pinos e entregamos pronto para pintar.
-      </p>
-
-      <ul class="mt-6 grid gap-3 text-neutral-300 text-sm list-disc list-inside">
-        <li>Modelagem e ajustes</li>
-        <li>Impressão PLA/Resina</li>
-        <li>Acabamento com primer + pintura</li>
-        <li>Envio protegido com tracking</li>
+      <ul class="mt-6 text-sm text-neutral-400 grid grid-cols-2 gap-2 max-w-md">
+        <li>• Impressão FDM de alta qualidade</li>
+        <li>• Pintura com tinta acrílica</li>
+        <li>• Tamanhos 10–20 cm (ou sob medida)</li>
+        <li>• Envio nacional</li>
       </ul>
     </div>
+    <div class="relative">
+      <!-- Hero image: escolha uma das Hornet pintadas -->
+      <img src="/assets/gallery/IMG-20251105-WA0003.jpg" alt="Estátua Hornet pintada — PrintVerso" class="rounded-2xl shadow-2xl w-full object-cover">
+      <div class="absolute -bottom-4 -right-4 bg-neutral-900/80 border border-neutral-800 rounded-xl px-3 py-2 text-xs">Projeto real PrintVerso</div>
+    </div>
+  </section>
 
-    <!-- FORMULÁRIO -->
-    <div id="orcamento" class="bg-neutral-900 border border-neutral-800 rounded-3xl p-6">
-      <h4 class="text-xl font-bold">Pedido de orçamento</h4>
+  <!-- Galeria -->
+  <section id="galeria" class="border-t border-neutral-800/70">
+    <div class="container mx-auto px-4 py-12 md:py-16">
+      <h2 class="text-2xl md:text-3xl font-extrabold">Galeria</h2>
+      <p class="mt-2 text-neutral-400">Alguns dos modelos que já produzimos. Clique para ampliar.</p>
 
-      <div class="grid gap-3 mt-4">
-        <label class="text-sm">Nome<input id="nome" class="mt-1 w-full rounded-xl bg-neutral-950 border border-neutral-800 px-3 py-2" placeholder="Teu nome"></label>
-        <label class="text-sm">Email<input id="email" type="email" class="mt-1 w-full rounded-xl bg-neutral-950 border border-neutral-800 px-3 py-2" placeholder="teu@email.com"></label>
-        <label class="text-sm">Descrição<textarea id="descricao" class="mt-1 w-full rounded-xl bg-neutral-950 border border-neutral-800 px-3 py-2 min-h-[110px]" placeholder="Tamanho, cores, acabamento, prazos…"></textarea></label>
+      <div class="mt-8 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-5">
+        <!-- Cada card usa data-full para abrir no lightbox -->
+        <button class="group" data-full="/assets/gallery/IMG-20251105-WA0003.jpg" aria-label="Abrir imagem">
+          <figure class="overflow-hidden rounded-2xl bg-neutral-900 border border-neutral-800">
+            <img src="/assets/gallery/IMG-20251105-WA0003.jpg" alt="Hornet pintada" class="w-full h-64 object-cover transition group-hover:scale-105"/>
+          </figure>
+          <figcaption class="mt-2 text-sm text-neutral-300">Hornet — pintada à mão</figcaption>
+        </button>
 
-        <div class="grid grid-cols-2 gap-3">
-          <label class="text-sm">Altura (cm)<input id="altura" class="mt-1 w-full rounded-xl bg-neutral-950 border border-neutral-800 px-3 py-2" value="12"></label>
-          <label class="text-sm">Prazo ideal<input id="prazo" class="mt-1 w-full rounded-xl bg-neutral-950 border border-neutral-800 px-3 py-2" placeholder="Ex: 10 dias"></label>
+        <button class="group" data-full="/assets/gallery/IMG-20251105-WA0004.jpg">
+          <figure class="overflow-hidden rounded-2xl bg-neutral-900 border border-neutral-800">
+            <img src="/assets/gallery/IMG-20251105-WA0004.jpg" alt="Hornet lateral" class="w-full h-64 object-cover transition group-hover:scale-105"/>
+          </figure>
+          <figcaption class="mt-2 text-sm text-neutral-300">Hornet — lateral</figcaption>
+        </button>
+
+        <button class="group" data-full="/assets/gallery/IMG-20251105-WA0006.jpg">
+          <figure class="overflow-hidden rounded-2xl bg-neutral-900 border border-neutral-800">
+            <img src="/assets/gallery/IMG-20251105-WA0006.jpg" alt="Hornet vista 3" class="w-full h-64 object-cover transition group-hover:scale-105"/>
+          </figure>
+          <figcaption class="mt-2 text-sm text-neutral-300">Hornet — vista 3</figcaption>
+        </button>
+
+        <button class="group" data-full="/assets/gallery/IMG-20251105-WA0008.jpg">
+          <figure class="overflow-hidden rounded-2xl bg-neutral-900 border border-neutral-800">
+            <img src="/assets/gallery/IMG-20251105-WA0008.jpg" alt="Hornet base escura" class="w-full h-64 object-cover transition group-hover:scale-105"/>
+          </figure>
+          <figcaption class="mt-2 text-sm text-neutral-300">Hornet — base escura</figcaption>
+        </button>
+
+        <button class="group" data-full="/assets/gallery/IMG-20251030-WA0019.jpg">
+          <figure class="overflow-hidden rounded-2xl bg-neutral-900 border border-neutral-800">
+            <img src="/assets/gallery/IMG-20251030-WA0019.jpg" alt="Busto Deadpool pintado" class="w-full h-64 object-cover transition group-hover:scale-105"/>
+          </figure>
+          <figcaption class="mt-2 text-sm text-neutral-300">Deadpool — busto pintado</figcaption>
+        </button>
+
+        <button class="group" data-full="/assets/gallery/IMG-20251024-WA0009.jpg">
+          <figure class="overflow-hidden rounded-2xl bg-neutral-900 border border-neutral-800">
+            <img src="/assets/gallery/IMG-20251024-WA0009.jpg" alt="Ryu em PLA cru" class="w-full h-64 object-cover transition group-hover:scale-105"/>
+          </figure>
+          <figcaption class="mt-2 text-sm text-neutral-300">Ryu — impresso (sem pintura)</figcaption>
+        </button>
+
+        <button class="group" data-full="/assets/gallery/IMG-20251024-WA0002.jpg">
+          <figure class="overflow-hidden rounded-2xl bg-neutral-900 border border-neutral-800">
+            <img src="/assets/gallery/IMG-20251024-WA0002.jpg" alt="Funko estilizado com rifle" class="w-full h-64 object-cover transition group-hover:scale-105"/>
+          </figure>
+          <figcaption class="mt-2 text-sm text-neutral-300">Chibi — impresso (sem pintura)</figcaption>
+        </button>
+
+        <button class="group" data-full="/assets/gallery/IMG-20251105-WA0009.jpg">
+          <figure class="overflow-hidden rounded-2xl bg-neutral-900 border border-neutral-800">
+            <img src="/assets/gallery/IMG-20251105-WA0009.jpg" alt="Jason chibi pintado" class="w-full h-64 object-cover transition group-hover:scale-105"/>
+          </figure>
+          <figcaption class="mt-2 text-sm text-neutral-300">Jason — chibi pintado</figcaption>
+        </button>
+
+        <button class="group" data-full="/assets/gallery/IMG-20251105-WA0008.jpg">
+          <figure class="overflow-hidden rounded-2xl bg-neutral-900 border border-neutral-800">
+            <img src="/assets/gallery/IMG-20251105-WA0008.jpg" alt="Hornet — detalhe" class="w-full h-64 object-cover transition group-hover:scale-105"/>
+          </figure>
+          <figcaption class="mt-2 text-sm text-neutral-300">Hornet — detalhe</figcaption>
+        </button>
+      </div>
+
+      <dialog id="lightbox">
+        <button id="closeLb" class="absolute right-4 top-4 z-20 bg-neutral-900/70 border border-neutral-700 text-neutral-200 rounded-full px-3 py-1 text-sm">Fechar</button>
+        <img id="fullImg" src="" alt="Visualização" class="w-full h-auto rounded-xl shadow-2xl"/>
+      </dialog>
+    </div>
+  </section>
+
+  <!-- Processo -->
+  <section id="processo" class="border-t border-neutral-800/70">
+    <div class="container mx-auto px-4 py-12 md:py-16">
+      <h2 class="text-2xl md:text-3xl font-extrabold">Como funciona</h2>
+      <div class="mt-8 grid md:grid-cols-3 gap-6">
+        <div class="rounded-2xl border border-neutral-800 p-5 bg-neutral-900/40">
+          <div class="text-indigo-400 font-bold">1. Pedido</div>
+          <p class="mt-2 text-neutral-300">Diz o personagem, o tamanho (10–20 cm ou mais) e se quer pintura simples ou detalhada.</p>
         </div>
-
-        <label class="text-sm">Link do modelo (opcional)<input id="link" class="mt-1 w-full rounded-xl bg-neutral-950 border border-neutral-800 px-3 py-2" placeholder="URL do STL/3MF/Ideia"></label>
-
-        <div class="flex flex-wrap gap-3 pt-2">
-          <a id="mailto" class="rounded-2xl px-4 py-2 border border-neutral-700 cursor-pointer">Enviar por Email</a>
+        <div class="rounded-2xl border border-neutral-800 p-5 bg-neutral-900/40">
+          <div class="text-indigo-400 font-bold">2. Produção</div>
+          <p class="mt-2 text-neutral-300">Impressão 3D em PLA de qualidade, montagem e pintura à mão.</p>
         </div>
-
-        <p class="text-xs text-neutral-500 mt-2">
-          Ao enviar, concordas com nossos prazos e política de encomendas.
-        </p>
+        <div class="rounded-2xl border border-neutral-800 p-5 bg-neutral-900/40">
+          <div class="text-indigo-400 font-bold">3. Envio</div>
+          <p class="mt-2 text-neutral-300">Embalado com proteção e envio para todo Portugal. Também pode levantar em mãos (Porto/Matosinhos).</p>
+        </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- FAQ -->
-<section id="faq" class="mx-auto max-w-6xl px-4 py-10">
-  <h3 class="text-2xl md:text-3xl font-extrabold">FAQ</h3>
-
-  <div class="mt-6 grid md:grid-cols-2 gap-6">
-    <details class="bg-neutral-900 border border-neutral-800 rounded-2xl p-5"><summary class="cursor-pointer font-semibold">Quanto tempo leva para produzir?</summary><p class="mt-2 text-neutral-300">Peças de 10–20 cm normalmente em 5–10 dias.</p></details>
-    <details class="bg-neutral-900 border border-neutral-800 rounded-2xl p-5"><summary class="cursor-pointer font-semibold">Enviam para todo o país?</summary><p class="mt-2 text-neutral-300">Sim. Envio com tracking e embalamento reforçado.</p></details>
-    <details class="bg-neutral-900 border border-neutral-800 rounded-2xl p-5"><summary class="cursor-pointer font-semibold">Aceitam modelos do cliente?</summary><p class="mt-2 text-neutral-300">Aceitamos STL/3MF e também criamos sob pedido.</p></details>
-  </div>
-</section>
-
-<!-- LINKS -->
-<section id="links" class="mx-auto max-w-6xl px-4 pb-16">
-  <div class="bg-neutral-900 border border-neutral-800 rounded-3xl p-6 md:p-8 flex flex-col md:flex-row items-center justify-between gap-6">
-    <div>
-      <h4 class="text-xl font-bold">Compra segura nas plataformas</h4>
-      <p class="text-neutral-300 mt-1">Pode comprar pelas nossas lojas oficiais.</p>
-    </div>
-    <div class="flex flex-wrap gap-3">
-      <a href="https://www.vinted.pt/" target="_blank" class="rounded-2xl px-4 py-2 bg-neutral-800 border border-neutral-700">Vinted</a>
-      <a href="https://www.instagram.com/" target="_blank" class="rounded-2xl px-4 py-2 grad text-white">Instagram</a>
-    </div>
-  </div>
-</section>
-
-<!-- FOOTER -->
-<footer id="contactos" class="border-t border-neutral-800">
-  <div class="mx-auto max-w-6xl px-4 py-10 grid md:grid-cols-3 gap-6">
-    <div>
-      <div class="flex items-center gap-3">
-        <img src="./assets/logo.png" class="w-10 h-10 rounded-2xl grad" alt="PV">
-        <p class="font-black text-lg">PrintVerso</p>
+  <!-- Contacto -->
+  <section id="contacto" class="border-t border-neutral-800/70">
+    <div class="container mx-auto px-4 py-12 md:py-16">
+      <div class="rounded-2xl border border-neutral-800 p-6 md:p-8 bg-gradient-to-br from-neutral-900 to-neutral-900/40">
+        <h2 class="text-2xl md:text-3xl font-extrabold">Pedir orçamento</h2>
+        <p class="mt-2 text-neutral-300">Respondo em poucas horas. Envie referências e o tamanho desejado.</p>
+        <div class="mt-5 flex flex-wrap gap-3">
+          <!-- Atualize o email abaixo se necessário -->
+          <a href="mailto:suporte@printverso3d.art?subject=Orçamento%20PrintVerso&body=Olá,%20quero%20encomendar%20uma%20miniatura%203D..." class="px-4 py-2 rounded-lg bg-indigo-600 hover:bg-indigo-500">Enviar e‑mail</a>
+          <a href="https://www.vinted.pt/member/printverso" class="px-4 py-2 rounded-lg bg-white/10 hover:bg-white/20" target="_blank" rel="noopener">Ver peças na Vinted</a>
+        </div>
       </div>
-      <p class="text-neutral-400 mt-3 max-w-sm">Loja de impressão 3D em Portugal. Action figures, itens para casa e projetos personalizados.</p>
     </div>
+  </section>
 
-    <div>
-      <h5 class="font-semibold">Contactos</h5>
-      <ul class="mt-3 space-y-2 text-neutral-400">
-        <li><a id="emailFooter" class="hover:text-white"></a></li>
-      </ul>
+  <footer class="border-t border-neutral-800/70 py-8 text-center text-sm text-neutral-400">
+    <div class="container mx-auto px-4">
+      © <span id="y"></span> PrintVerso — Impressão 3D. Todos os direitos reservados.
     </div>
+  </footer>
 
-    <div>
-      <h5 class="font-semibold">Informações</h5>
-      <ul class="mt-3 space-y-2 text-neutral-400 text-sm">
-        <li>Prazo padrão: 5–10 dias úteis</li>
-        <li>IVA: Isento art. 53.º ou Regime Normal</li>
-        <li>Faturação com QR/ATCUD (ou portal das finanças)</li>
-      </ul>
-    </div>
-  </div>
+  <script>
+    // ano no footer
+    document.getElementById('y').textContent = new Date().getFullYear();
 
-  <div class="text-center text-xs text-neutral-600 pb-8">
-    © <span id="year"></span> PrintVerso. Todos os direitos reservados.
-  </div>
-</footer>
-
-<!-- SCRIPT -->
-<script>
-  document.getElementById('year').textContent = new Date().getFullYear();
-
-  const email = "cliente@printverso.pt";
-  document.getElementById("emailFooter").href = "mailto:" + email;
-  document.getElementById("emailFooter").textContent = email;
-
-  function buildMessage() {
-    const nome = document.getElementById('nome').value || '(teu nome)';
-    const mail = document.getElementById('email').value || '';
-    const descricao = document.getElementById('descricao').value || '';
-    const altura = document.getElementById('altura').value || '';
-    const prazo = document.getElementById('prazo').value || '';
-    const link = document.getElementById('link').value || '';
-
-    return `Olá, sou ${nome}.%0AQuero um orçamento para impressão 3D.%0A%0A` +
-           `Descrição: ${encodeURIComponent(descricao)}%0A` +
-           `Altura: ${altura} cm%0A` +
-           `Prazo: ${prazo}%0A` +
-           `Link: ${encodeURIComponent(link)}%0A` +
-           `Email para contacto: ${mail}`;
-  }
-
-  const mailto = document.getElementById('mailto');
-  function updateLinks() {
-    mailto.href = `mailto:${email}?subject=Orçamento%20PrintVerso&body=${buildMessage()}`;
-  }
-
-  ['nome','email','descricao','altura','prazo','link'].forEach(id => {
-    document.getElementById(id).addEventListener('input', updateLinks);
-  });
-
-  updateLinks();
-</script>
-
+    // lightbox simples
+    const lb = document.getElementById('lightbox');
+    const full = document.getElementById('fullImg');
+    document.querySelectorAll('[data-full]').forEach(btn => {
+      btn.addEventListener('click', () => {
+        full.src = btn.getAttribute('data-full');
+        lb.showModal();
+      });
+    });
+    document.getElementById('closeLb').addEventListener('click', () => lb.close());
+    lb.addEventListener('click', (e) => { if(e.target === lb) lb.close(); });
+  </script>
 </body>
 </html>
